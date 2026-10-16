@@ -53,3 +53,13 @@ The worker explicitly reviewed the generated full-size image and the encoded thu
 The built-in imagegen tool edited the bare cave. Its prompt asked for a modest first prehistoric mark on the lower-left rock face: recognizable heavy-lidded Pepe, three shallow bowls and ochre pebbles, exactly five digits on the sole visible hand, earth pigments with bare stone showing through, unchanged cave dimensions/lighting/framing, abundant untouched space, and no text, logos, stencils, or photographic/3D figures. The JPEG is a 512-pixel conversion of that finished wall.
 
 No coins are required to run this piece. It computes allocations and reads public token metadata; it does not access wallets or send payments.
+
+## Step 26: RewardMerge
+
+[RewardMerge](tools/rewardmerge/README.md) verifies and totals independent ZTO allocation rounds without re-rounding their shares. It preserves each round's receipt and flags identical reports that could have been entered twice. The address-free demo sums exactly 3 ZTO; 11 tests passed, including 100 seeded multi-round conservation cases.
+
+```sh
+python3 -B line-3/tools/rewardmerge/rewardmerge.py demo
+```
+
+The new mark joins two ochre pebble streams in one charcoal bowl. The full wall is `artifacts/line-3/wall-v7.png`, also available as `wall.png`; its record and 512-pixel JPEG are `dist/line-3/26.json` and `26.jpg`. [Step 26 review](step-26-review.json) records formats, dimensions, preservation and visual limitations.

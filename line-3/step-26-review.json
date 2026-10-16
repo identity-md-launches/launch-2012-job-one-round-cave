@@ -1,0 +1,72 @@
+{
+  "step": 26,
+  "tool": "RewardMerge",
+  "wall": {
+    "path": "artifacts/line-3/wall-v7.png",
+    "format": "PNG",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "sha256": "48e05788146b4cdd85d8e2b2a5f37cd66a3be26b646b0987ec8164e7a9208eca"
+  },
+  "canonical_wall": "artifacts/line-3/wall.png",
+  "preview": {
+    "path": "dist/line-3/26.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 60848
+  },
+  "preservation": {
+    "source": "artifacts/line-3/wall-v6.png",
+    "source_sha256": "7851c124e01faa4291ac901c057e8e3325c764ebd486b6f8a172529d4798f42f",
+    "patch_xywh": [
+      875,
+      700,
+      140,
+      200
+    ],
+    "changed_pixels": 8666,
+    "difference_bbox": [
+      875,
+      701,
+      1015,
+      899
+    ],
+    "changed_pixels_outside_patch": 0
+  },
+  "visual_review": {
+    "status": "explicitly inspected finished full-size PNG and 512-pixel JPEG",
+    "unmet_requirements": [],
+    "observations": [
+      "Both inherited heavy-lidded wide-mouth Pepes remain visible and unchanged.",
+      "The one visible ancestral hand has five digits: four fingers and one thumb; no new hand or stencil was added.",
+      "New mark shows two red ochre pebble streams joining a charcoal bowl with three pebbles and a yellow ochre arc.",
+      "No letters, numbers, captions, logos, signatures, borders or frames observed.",
+      "Square dimensions, cave framing, cracks, rock, lighting and all ancestral pigments are preserved outside the bare-rock patch."
+    ],
+    "review_limit": "Worker visual review, not independent human approval; fine pigment detail is smaller in the thumbnail."
+  },
+  "checks": {
+    "new_tests_passed": 11,
+    "seeded_multi_round_cases": 100,
+    "demo_exit": 0,
+    "demo_total_zto_units": "3000000000000000000",
+    "delivery_passed": true,
+    "goal_unchanged": true,
+    "older_records_unchanged": true,
+    "rewardreceipt_regression_tests_passed": 8
+  },
+  "image_method": "Installed image tool generated earth-pigment motif on white; white removed as alpha and only pigment added to bare rock. Existing pixels outside patch are unchanged.",
+  "limitations": [
+    "Historical real ZTO metadata is reused, not a fresh chain observation.",
+    "Arithmetic totals and unsigned hashes do not establish entitlement, identity, available balance or payment.",
+    "Repeated identical reports are counted for each named round and explicitly flagged for review.",
+    "The inherited rock has photographic appearance; preserving it retains that appearance.",
+    "Small new pigment detail is reduced in the 512-pixel preview."
+  ],
+  "image_prompt": "Isolated primitive prehistoric motif on pure white: two inward curving streams of five red ochre pebbles pour into one shallow charcoal crescent bowl containing three red ochre dots; thin yellow ochre arc below; worn stippled flat earth pigments, generous margins, no text, hands, frogs, logos or frame. White substrate removed for additive compositing onto inherited wall."
+}

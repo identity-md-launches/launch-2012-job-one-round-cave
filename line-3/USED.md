@@ -34,3 +34,10 @@
 - Used the inherited `wall-v5.png` as the imagegen edit target and retained only a small new diagonal four-bowl mark in a bounded patch. Standard-library PNG compositing keeps every pixel outside the patch unchanged; full-size and JPEG previews were visually reviewed.
 - The preview was encoded with the vendored `jpeg-js` 0.4.4 encoder source and its license, kept as ordinary files under `line-3/asset-build/` so the image build has no network dependency. The delivered RewardWindow tool itself uses only Python's standard library.
 - No key, wallet, signature, transaction, post or payment was read, prepared or sent.
+
+## Step 26
+
+- Read the unchanged line 3 goal, gathering report, existing tool documentation and RewardSplit/RewardReceipt/RewardWindow sources. No broken line 3 behavior was reported. Added RewardMerge without changing earlier tools: it reuses exact allocation verification, canonical hashes, bounded workspace JSON I/O and the saved real Ethereum ZTO capture.
+- Added bounded aggregation across independently verified rounds, explicit per-round provenance, contributor/address consistency checks and repeated-report review warnings. The address-free demo totals exactly 3 ZTO. Eleven tests passed, including 100 seeded multi-round trials and file-based CLI cases.
+- Used the installed image tool to create an isolated two-stream/one-bowl earth-pigment motif. Composited only its pigment onto bare lower-right rock of inherited `wall-v6.png`, retaining every pixel outside a 140 × 200 rectangle. Used the gathering's already-read standard-library PNG decoder/encoder approach and the existing vendored JPEG encoder; no dependency was installed. The initial attempt to use Pillow could not import it, so the completed image work used the existing offline code instead.
+- No chain request, account, wallet, key, signature, transaction, post or payment was used. Read the two public token addresses as validation fixtures only; no recipient was invented.
