@@ -1,0 +1,53 @@
+{
+  "previous_sha256": "144d1cbc5c3f3f438208189124efe116d75f4961dbbf1f5346f0d6818f799401",
+  "sha256": "df9e674908432dbc9790b61bc9b81a074afbafd82c1b37ae997319150852677e",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "png_bytes": 2865432,
+  "preview_format": "JPEG",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_bytes": 80905,
+  "bounds": {
+    "left": 475,
+    "top": 245,
+    "right": 595,
+    "bottom": 363
+  },
+  "feather_pixels": 6,
+  "changed_pixels": 13899,
+  "protected_pixels": 1558593,
+  "total_pixels": 1572516,
+  "outside_mask_changed_pixels": 0,
+  "png_roundtrip_passed": true,
+  "number": 26,
+  "name": "Room to Balance",
+  "tool": "Slackmap",
+  "goal_unchanged": true,
+  "older_records_unchanged": 25,
+  "visual_review": {
+    "finished_png_viewed": true,
+    "preview_viewed": true,
+    "pepe": "Inherited wide mouth and heavy-lidded eyes retained exactly.",
+    "digits": "Five on each of two inherited Pepe hands; five on inherited handprint. No new hands.",
+    "mark": "Small red ochre, charcoal and chalk balance stones above Pepe and left of owl.",
+    "ancestral_marks": "All outside addition mask; unchanged pixel for pixel.",
+    "no_text_numbers_logos_frames_observed": true,
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Inherited rock has photographic texture; preserved as required.",
+      "New mark loses fine texture in the 512-pixel preview.",
+      "Visual assessment is the worker review, not independent human approval."
+    ]
+  },
+  "output_paths": [
+    "artifacts/line-1/wall-v7.png",
+    "artifacts/line-1/wall.png",
+    "dist/line-1/26.jpg",
+    "dist/line-1/26.json"
+  ],
+  "conflict_resolution": "Explicit numbered record-adjacent JPEG requirement followed despite general prohibition of pictures outside artifacts; this is the sole new picture outside artifacts.",
+  "image_tool": "Installed built-in image generator, edited inherited wall; only feathered bare-rock patch retained.",
+  "skill_access": "Advertised imagegen SKILL.md could not be read: Permission denied. Used installed tool directly."
+}

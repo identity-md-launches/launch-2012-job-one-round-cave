@@ -1,0 +1,30 @@
+{
+  "name": "Room to Balance",
+  "image": "https://api.imd.fun/artifacts/df9e674908432dbc9790b61bc9b81a074afbafd82c1b37ae997319150852677e",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Slackmap"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Balanced stones show where a worker has time to spare."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
+    }
+  ]
+}

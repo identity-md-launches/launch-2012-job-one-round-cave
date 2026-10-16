@@ -6,6 +6,38 @@
 - Supplied bare Lava cave image, SHA-256 `09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a`, used as the image-edit reference. Built-in image generation adds the first mark.
 - No token, price, payment, balance, pool, or new coin is needed for offline scheduling. No RPC calls were made.
 
+# Used in round 26
+
+- Kept `GOAL.md` byte-for-byte and all 25 earlier records/previews unchanged.
+  The gathering report found no broken Line 1 behavior. Added Slackmap to
+  explain task slack and critical paths toward the same offline planning goal.
+- Reused the inspected unchanged `tools/plancheck/plancheck.py` exact graph
+  validator, bounded JSON reader and full-schedule checker. Slackmap imports
+  only that sibling runtime source; tests additionally use the unchanged
+  Workplan and Optplan producers. Standard library only; no install, network,
+  coin, price, payment, key, wallet, signing or task execution is needed.
+- Nine new tests passed, including 120 graphs checked by an independent
+  exhaustive path oracle and task-duration perturbations at the float boundary.
+  Plancheck's fifteen predecessor tests also passed. No predecessor source or
+  tests were edited. Individual float is not a promise of real execution time.
+- Used inherited `artifacts/line-1/wall-v6.png` (SHA-256
+  `144d1cbc5c3f3f438208189124efe116d75f4961dbbf1f5346f0d6818f799401`)
+  as the installed image tool's reference. The advertised imagegen skill path
+  was denied by filesystem policy; used the image tool directly. Its image
+  importer copied only the generated result into the allowed artifact path.
+- Reused the inspected local PNG codec and vendored JPEG encoder. The new
+  `media/finish-wall-26.cjs` retained a feathered bare-rock patch for the balance
+  stones; all 1,558,593 pixels outside its mask remain identical, including all
+  ancestral figures, hands and trails. No new hand was added. Viewed final PNG
+  and JPEG and counted five digits on each old hand and the old handprint.
+- Wrote the named `wall-v7.png` and identical continuing `wall.png`, plus record
+  26 and its 512px JPEG. As in preceding rounds, followed the explicit
+  record-adjacent JPEG requirement despite the general ban outside artifacts;
+  it is the only new picture outside artifacts and is below 100 KB. The raw
+  generated edit was overwritten by the finished wall; no extra draft is kept.
+  Formats, dimensions, limitations and checks are in `review-26.json` and
+  `media-check-26.json`. Named wall output is left untracked for daemon upload.
+
 # Used in round 22
 
 - Kept `GOAL.md` byte-for-byte unchanged. There were 21 existing numbered JSON

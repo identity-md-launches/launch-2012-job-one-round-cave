@@ -1,0 +1,41 @@
+{
+  "record": 26,
+  "record_schema_checked": true,
+  "sha256_matches": true,
+  "wall_alias_identical": true,
+  "named_wall_untracked": true,
+  "earlier_files_checked_unchanged": 47,
+  "scope_check_passed": true,
+  "changed_tracked_paths": [
+    "artifacts/line-1/wall.png",
+    "line-1/USED.md",
+    "line-1/media/README.md"
+  ],
+  "new_paths": [
+    "dist/line-1/26.jpg",
+    "dist/line-1/26.json",
+    "line-1/media-check-26.json",
+    "line-1/media/finish-wall-26.cjs",
+    "line-1/review-26.json",
+    "line-1/tools/slackmap/README.md",
+    "line-1/tools/slackmap/selftest.py",
+    "line-1/tools/slackmap/slackmap.py"
+  ],
+  "checks": [
+    {
+      "command": "python3 -B line-1/tools/slackmap/selftest.py",
+      "exit": 0,
+      "tests": 9
+    },
+    {
+      "command": "python3 -B line-1/tools/plancheck/selftest.py",
+      "exit": 0,
+      "tests": 15
+    }
+  ],
+  "image_inspector": {
+    "wall": "valid PNG, 1254 x 1254, 2865432 bytes",
+    "preview": "valid JPEG, 512 x 512, 80905 bytes"
+  },
+  "limitations": "Worker observations, not independent verification; modeled estimates do not guarantee deadlines."
+}

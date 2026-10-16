@@ -1,5 +1,19 @@
 # Wall assembly for rounds 22–23
 
+## Round 26 addition
+
+`finish-wall-26.cjs` uses the inherited inspected codec and JPEG encoder. It
+copies only a feathered 120 × 118 bare-rock rectangle containing the image
+generator's balance stones, preserving every pixel outside it. The final
+1254px RGB PNG and 512px JPEG were inspected; format, dimensions, byte counts,
+preservation and visual limitations are recorded in `../review-26.json`.
+
+One-time command: `node line-1/media/finish-wall-26.cjs`. Requires inherited
+`wall-v6.png` and the raw generated edit at `wall-v7.png`. Overwrites the edit
+with the finished wall, also writes `wall.png` and `dist/line-1/26.jpg`.
+The generated raw edit is not retained; rerunning on the finished wall does
+not replay generation. This helper is independent of Slackmap's runtime.
+
 ## Round 24 addition
 
 `finish-wall-24.cjs` reuses this codec without changing earlier assembly code.
