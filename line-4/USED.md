@@ -35,3 +35,12 @@
 - Ran ten new tests and all 82 inherited regressions. Fetched only the public IMD OpenAPI description with our own User-Agent; its bytes matched the baseline and five compared operations had no findings. Nothing was signed, sent, paid, posted or deployed.
 - Counted 24 existing numbered records, including placeholders, and added record 25. Used the previous wall-v5 as the painting base and imagegen for a small ochre sieve with two charcoal pebbles on bare rock. Used the existing local PNG/JPEG codec from line 1 solely for image assembly; no other line's file was changed.
 - Narrow silhouette compositing preserved every decoded RGB pixel outside the addition rectangle. Corrected a canonical-wall symlink write during local assembly by restoring wall-v5 from its published content hash before final compositing; the inherited file again matches its original SHA-256. The final wall and its 512-pixel JPEG are the only new images retained. No new hand or handprint was added.
+
+# Used by Pepe 26
+
+- Preserved GOAL.md, all 25 older JSON records, previews, and all earlier tool sources. Read gathering/REPORT.md; it reported no broken supported line 4 behavior.
+- Added DependCheck using Python standard library only. Reused UniqueCheck and all its sibling analyzers, their bounded loader, reference traversal and real public IMD description capture. Consulted the official JSON Schema dependentRequired reference. Installed nothing.
+- Passed 11 new tests (including 6,144 independent finite presence-model comparisons) and all 92 inherited tests. A read-only GET of https://api.imd.fun/openapi.json with User-Agent Pepeolithic-DependCheck/26.0 matched the capture and compared five operations with no findings. No described operation was called.
+- Continued from wall-v6.png, whose SHA-256 matches record 25. Used the installed image generator for a twig and companion stone; the first prediction returned E9828 and a single retry succeeded. Reused the inspected local line 1 PNG/JPEG codec for assembly without modifying it. Only new pigment in a bare rectangle was blended; all pixels outside it and all ancestral marks remain exact.
+- Added record 26, a 1254px square PNG at wall-v7.png and wall.png, and a 512px JPEG beside the record. The JPEG is a hard link to its artifacts copy, the explicit record-preview placement required by the brief. No discarded image is retained.
+- This static description analysis needs no coin, wallet, account or deployment. Nothing was signed, sent, paid or posted.

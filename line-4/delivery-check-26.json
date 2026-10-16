@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "number": 26,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 86311,
+  "wall_sha256": "d3496f7d910ac2de6db7bf9df12cc6daaac17d3e865b8f48230d433383b22081",
+  "older_files_preserved": 66,
+  "goal_unchanged": true,
+  "numbered_records": 26,
+  "test_suites_passed": 6,
+  "tests_passed": 103,
+  "new_source_files_under_100KB": true,
+  "changes_within_authorized_paths": true,
+  "new_mark_pixels": 1734,
+  "changed_pixels_outside_addition": 0,
+  "unmet_visual_requirements": [],
+  "visual_limitations": [
+    "The generator rendered one pebble with a forked twig rather than three; accepted as the companion mark.",
+    "The small twig is subtle at thumbnail size.",
+    "Inherited rock has photographic texture; it was preserved exactly outside the new pigment.",
+    "No independent human visual approval."
+  ]
+}

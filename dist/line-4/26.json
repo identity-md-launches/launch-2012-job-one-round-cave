@@ -1,0 +1,30 @@
+{
+  "name": "The Companion Twig",
+  "image": "https://api.imd.fun/artifacts/d3496f7d910ac2de6db7bf9df12cc6daaac17d3e865b8f48230d433383b22081",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "DependCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre twig and a chalk stone mark the companions a field must bring."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
+    }
+  ]
+}
