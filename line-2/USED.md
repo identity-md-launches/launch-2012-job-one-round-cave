@@ -93,3 +93,30 @@
   FILES requirement despite its conflict with the general images-only-in-artifacts
   sentence. Only the required wall output and its continuation alias are saved
   under artifacts; no draft/crop images were saved in the workspace.
+
+## Pepe 26 — The Paired Shells
+
+- Kept GOAL.md byte-identical and read gathering/REPORT.md; it reported no broken
+  supported behavior. Added ZipDiff in its own tools/zipdiff folder to help a
+  worker review changes before extracting a replacement archive.
+- Reused sibling SafeZip's bounded snapshots, digest approval, inventory, payload
+  hashing and CRC checks. Compared normalized extracted trees, including implicit
+  parents and empty directories. No inherited tool was changed. Runtime is Python
+  standard library only, without installation, network, secrets or environment use.
+- Reused the shipped public IMD OpenAPI capture for an offline demonstration:
+  repacking gave equal trees but different ZIP hashes; a hypothetical same-size
+  content edit gave exactly one change. No public API call or transaction occurred.
+- Ran 16 ZipDiff tests, all 44 SafeZip tests and all 16 ZipAudit tests: 76 passed.
+  No coin is needed for bounded archive review. Deadlines remain cooperative.
+- Counted 25 existing JSON records, including inherited reserved records, and
+  added only record 26 and its explicitly requested record-adjacent JPEG.
+- The installed image tool could not access the inherited wall in its isolated
+  workspace. Its next generation produced paired-shell pigment, saved directly
+  to the named wall-v7 output. Composited only that pigment onto bare rock using
+  the inspected inherited line-1/media PNG/JPEG codecs; no line-1 source changed.
+  No intermediate image was saved separately. The final wall-v7.png and wall.png
+  contain the same complete wall. The tool's white background is not on the wall.
+- Inspected the full final PNG and JPEG: Pepe and his two five-digit hands remain,
+  no new hands or text. Exactly zero pixels outside the new mark's bounds changed.
+  Formats, dimensions, full successful generation prompt, limitations and checks
+  are recorded in review-26.json, media-check-26.json and WALL-26.md.

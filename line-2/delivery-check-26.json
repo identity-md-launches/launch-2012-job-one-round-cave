@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "goal_and_prior_records_previews_unchanged": 31,
+  "new_record": 26,
+  "record_hash_matches_wall": true,
+  "wall_alias_matches": true,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 88909,
+  "no_unmet_new_mark_visual_requirements_observed": true,
+  "changed_paths_within_scope": true,
+  "new_nonartifact_files_under_100KB": true,
+  "named_output_untracked": true,
+  "changed_source_and_preview_paths": [
+    "artifacts/line-2/wall.png",
+    "line-2/USED.md",
+    "dist/line-2/26.jpg",
+    "dist/line-2/26.json",
+    "line-2/WALL-26.md",
+    "line-2/delivery-check-26.json",
+    "line-2/finish-wall-26.cjs",
+    "line-2/media-check-26.json",
+    "line-2/review-26.json",
+    "line-2/tools/zipdiff/README.md",
+    "line-2/tools/zipdiff/demo.py",
+    "line-2/tools/zipdiff/selftest.py",
+    "line-2/tools/zipdiff/zipdiff.py"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "number": 26,
+  "tool": "ZipDiff",
+  "media": {
+    "previous_sha256": "be0c3c3cd5b3fad1408455efbe39e4a3dd81776d3fc3760655909c83c7a7ed98",
+    "pigment_sha256": "214efc8074d39b52012e61014f84b01dc88eed71424f1894bfe79f0ce8490127",
+    "sha256": "cf5e44ae73ddf94ae163b5a9729323a1e15c23fb864f94ea929a9ef9f6644142",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "png_bytes": 2822192,
+    "preview_width": 512,
+    "preview_height": 512,
+    "preview_format": "JPEG",
+    "preview_bytes": 88909,
+    "bounds": {
+      "left": 820,
+      "top": 930,
+      "right": 1030,
+      "bottom": 1026
+    },
+    "changed_pixels": 11564,
+    "unchanged_pixels": 1560952,
+    "outside_mark_changed_pixels": 0,
+    "png_roundtrip_passed": true
+  },
+  "generation_tool": "installed native image tool (mcp__image__generate_image)",
+  "generation_prompt": "Generate a square 1254 by 1254 PNG, a pigment source for an additive cave-wall mark. Uniform plain chalk-white background. In the center draw ONLY two small side-by-side prehistoric clam shells in earth pigments: left shell charcoal black strokes, right shell red ochre strokes. Shells as flat curved fan shapes with irregular radiating ribs, worn handmade burnt-stick and thumb marks, no perspective or shadows, no 3D. Keep both shells together within the middle half of the canvas with plenty of white margin. Each shell should have a few yellow ochre flecks. Lascaux/Chauvet rough prehistoric style. No rock background, no text, no letters, no numerals, no hands, no people, no frame, no logo. This pigment will be overlaid on an existing wall without changing its rock or ancestor Pepe.",
+  "visual_review": {
+    "full_png_inspected": true,
+    "preview_jpeg_inspected": true,
+    "ancestor_hands_digit_counts": [
+      5,
+      5
+    ],
+    "new_hands": 0,
+    "words_or_numbers_observed": false,
+    "ancestral_marks_preserved": true,
+    "unmet_new_mark_requirements": [],
+    "limitations": [
+      "Inherited photographic-looking rock retained to preserve the original wall.",
+      "Fine pigment texture and red-shell contrast diminish at 512 px.",
+      "Worker visual inspection, not independent human certification."
+    ]
+  },
+  "checks": {
+    "zipdiff_tests": 16,
+    "safezip_tests": 44,
+    "zipaudit_tests": 16,
+    "all_passed": true,
+    "public_capture_demo": "23132 bytes; repacking equal trees; hypothetical same-size edit exactly one content_changed path",
+    "fresh_network_observation": false
+  }
+}
