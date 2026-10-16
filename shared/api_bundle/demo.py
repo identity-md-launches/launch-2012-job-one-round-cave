@@ -15,9 +15,9 @@ def demo():
     baseline = baseline_path.read_bytes()
     old = json.loads(baseline)
     schema = old['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']
-    schema.setdefault('properties', {})['clientTags'] = {'type': 'array', 'items': {'type': 'string'}}
+    schema.setdefault('properties', {}).update({'clientReference': {'type': 'string'}, 'clientContext': {'type': 'string'}})
     new = copy.deepcopy(old)
-    new['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['properties']['clientTags']['uniqueItems'] = True
+    new['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['dependentRequired'] = {'clientReference': ['clientContext']}
     scratch = Path('test/scratch')
     scratch.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='api-bundle-demo-', dir=scratch) as directory:
@@ -38,8 +38,8 @@ def demo():
             rejection = str(error)
         assert rejection == 'filesystem node limit exceeded'
         assert report['counts']['breaking'] == 1
-        assert any(f['code'] == 'unique_items_incompatible' for f in report['findings'])
-        return {'demo': 'Hypothetical array-uniqueness revision of a captured public API; no service operation called.',
+        assert any(f['code'] == 'dependent_required_incompatible' for f in report['findings'])
+        return {'demo': 'Hypothetical property-dependency revision of a captured public API; no service operation called.',
                 'baseline_source': 'https://api.imd.fun/openapi.json',
                 'baseline_sha256': hashlib.sha256(baseline).hexdigest(),
                 'network_used': False, 'files_extracted': 0,

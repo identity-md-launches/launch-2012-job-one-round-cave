@@ -8,12 +8,13 @@ Run from a workspace root:
 python3 -B shared/api_bundle/selftest.py
 ```
 
-Gathering 25 result: **28 integration tests passed**. New checks cover approved
-public-data array uniqueness changes, response variance in OpenAPI 3.0 and 3.1,
-malformed booleans, and CLI break/review/error exits. The inherited tests cover
-fixed values, bounds, multiples, approval, resource limits, cancellation, CRCs
-of every payload and inert executable content. Scratch lives under
-`test/scratch/` and is never a runtime dependency.
+Gathering 26 result: **32 integration tests passed**, also rerun in a workspace
+containing only this shared folder. New checks cover approved public-data
+property dependencies, response direction, OpenAPI version scope, transitive
+equivalence, graph limits, malformed constraints and all four CLI exits. Earlier
+uniqueness, fixed-value, bound, multiple, digest, CRC, resource and cancellation
+checks still pass. Scratch lives under `test/scratch/` and is never a runtime
+dependency.
 
 For two archives you received:
 
@@ -34,7 +35,7 @@ Replace the uppercase argument labels with the real 64-character hex digests fro
 Paths must be in the current workspace with no symlink components, and the exact selected member must exist in both ZIPs. JSON goes to stdout. Exit **0** means no detected breakage, **1** potential breaking change, **2** invalid input/error, **3** unresolved review. Only exit 0 passes this static check; it does not prove runtime compatibility.
 
 The shared snapshot joins SafeZip (line 2) with ApiDelta, BoundCheck,
-MultipleCheck, ConstCheck and UniqueCheck (line 4). `vendor/` contains ordinary
+MultipleCheck, ConstCheck, UniqueCheck and DependCheck (line 4). `vendor/` contains ordinary
 source files; `SOURCES.json` records original/delivered hashes. SafeZip and
 ApiDelta are byte-identical snapshots. Extensions only adapt sibling module and
 demo capture paths to the shared layout. No line source was modified. Refresh
@@ -58,6 +59,16 @@ values must be JSON booleans, and both explicitly non-array schemas skip the
 breaking rule. Inherited reviews remain even for relaxations. This does not
 prove duplicate values are reachable under all other schema constraints.
 
+DependCheck adds OpenAPI 3.1 `dependentRequired` findings. A new request
+obligation such as `clientReference` requiring `clientContext` can reject an old
+caller; removing an old response obligation can surprise consumers. It computes
+transitive presence implications, including unconditional required seeds. Adding
+an already implied edge creates no new dependency break, but retains the generic
+review. OpenAPI 3.0/cross-version changes also remain reviews. Visited dependency
+graphs are limited to 256 names and 1,024 edges; values must be unique-string
+arrays. This does not prove object satisfiability under other constraints or
+interpret `dependentSchemas`, conditionals or custom dialects.
+
 Add `--nodes 200` (Python `compare(..., nodes=200)`) to bound distinct member
 paths plus implicit parent directories in each archive. For example,
 `docs/openapi.json` consumes two nodes even when the ZIP has one entry. Default:
@@ -72,7 +83,7 @@ See the complete offline flow with one command:
 python3 -B shared/api_bundle/demo.py
 ```
 
-Observed: a hypothetical `clientTags` array-uniqueness change in the captured public
+Observed: a hypothetical `clientReference` → `clientContext` presence requirement in the captured public
 IMD API produces one breaking and one retained review finding over five operations.
 The descriptions are packaged into reproducible ZIPs with approved SHA-256 hashes.
 A two-node budget accepts `docs/openapi.json`; a one-node budget refuses it.

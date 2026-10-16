@@ -1,0 +1,25 @@
+{
+  "inherited_wall_sha256": "977888149a5832eb9c76df8ea47e6d1f6ec98eef069d2b89cd025cb199eacdd3",
+  "generated_edit_sha256": "7c8cec7692501b9d60dcc3f921d0550b5f5756d1b6f1888e8eb365d9fb6167c8",
+  "output_sha256": "b19664c882ed18ce34c90dd27759b0eade3b590977ba5439c8cd6ece3354571d",
+  "mark_rectangle": [
+    225,
+    322,
+    100,
+    160
+  ],
+  "changed_pixels_inside": 3444,
+  "pixels_changed_outside": 0,
+  "protected_rgb_sha256": "10d6a0defe3d6eb1c7713eb219515927c53f4ddd253c1188cbb875b37331320c",
+  "method": "Image-tool branch and binding pigment selected within a bare-rock patch and composited over original rock. All other RGB pixels retained.",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 87146
+}

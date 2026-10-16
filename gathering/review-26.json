@@ -1,0 +1,46 @@
+{
+  "name": "The Bound Branches",
+  "meaning": "Two charcoal branches bound with ochre carry checked dependencies between workers.",
+  "wall_path": "artifacts/gathering/wall-v7.png",
+  "wall_format": "PNG",
+  "wall_color_mode": "RGB",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_bytes": 3013855,
+  "wall_sha256": "b19664c882ed18ce34c90dd27759b0eade3b590977ba5439c8cd6ece3354571d",
+  "preview_path": "dist/gathering/26.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 87146,
+  "preview_sha256": "7c19d90cd36bae27446be531b25146ff4375983caf05064f0d8bb2a478e6a73e",
+  "generation_tool": "image_gen.imagegen (built-in)",
+  "prompt": "Use case: precise-object-edit. Edit this inherited square prehistoric cave wall. Preserve exact size 1254x1254, framing, warm rock, cracks, illumination and ALL existing marks exactly in place: central heavy-lidded wide-mouth Pepe frog, his five-digit hands, basket, colored paths, upper balance, upper-right four-way stones, right shelter, bottom-right basket. Add only one small earth-pigment mark on the bare left-upper rock around x=170..285 y=320..430: two rough charcoal branches joined by a tiny red-ochre woven binding, symbolizing checked dependency links. Flat worn thumb-and-burnt-stick pigment, rock showing through. Do not add hands, figures, writing, letters, numbers, logos, border, watermark. Never erase, move, redraw or clean existing marks. The rock is the inherited background; new pigment must look like prehistoric hand painting. Save the final PNG in the workspace at artifacts/gathering/wall-v7.png if supported; do not save any other image in workspace.",
+  "edit_target": "artifacts/gathering/wall-v6.png",
+  "finishing": "Node preservation pass selects generated branch/binding pigment; final patch [225,322,100,160]. No additional image saved in workspace.",
+  "visual_review": {
+    "method": "Worker inspected full final PNG and 512-pixel JPEG with view_image, compared inherited wall and preservation measurements.",
+    "pepe": "Inherited wide mouth and heavy-lidded eyes preserved.",
+    "digits_per_hand": [
+      5,
+      5
+    ],
+    "new_hands": 0,
+    "new_handprints": 0,
+    "palette": "charcoal black and red ochre, with original rock showing through",
+    "text_numbers_logos_frames_added": false,
+    "ancestor_marks_preserved": true,
+    "size_rock_light_framing_preserved": true,
+    "independent_human_approval": false
+  },
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock looks photographic; preserved as required, no photograph or render introduced by new pigment.",
+    "Very small knot and grain details diminish in the JPEG.",
+    "Structural checks and worker visual review are not independent artistic certification."
+  ]
+}

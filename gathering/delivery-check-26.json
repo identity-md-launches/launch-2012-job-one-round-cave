@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "line_files_unchanged": 282,
+  "gallery_records": 130,
+  "painted_records": 30,
+  "placeholders_preserved": 100,
+  "line_commands_passed": 48,
+  "line_unittest_cases": 287,
+  "cross_line_trials_passed": 21,
+  "shared_tests": 32,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "wall_sha256": "b19664c882ed18ce34c90dd27759b0eade3b590977ba5439c8cd6ece3354571d",
+  "jpeg_bytes": 87146,
+  "pixels_changed_inside": 3444,
+  "pixels_changed_outside": 0,
+  "source_hashes_checked": true,
+  "changed_paths_in_scope": true,
+  "named_png_untracked": true,
+  "direct_ancestor_comparison": true,
+  "limitation": "Local structural/byte checks do not certify behavior or artistic quality."
+}

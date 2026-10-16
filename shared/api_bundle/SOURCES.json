@@ -34,5 +34,11 @@
     "source_sha256": "c8153790ed62c504eadc174085309a081536e847a3b7d2a5128fdcaa31ffc30a",
     "sha256": "66cc6c745e081a57217348c764c47b04d114439eb919dc1cbeb579fe7e6509f8",
     "adaptation": "Sibling ConstCheck path adjusted for shared vendor layout only."
+  },
+  "vendor/dependcheck.py": {
+    "source": "line-4/tools/dependcheck/dependcheck.py",
+    "source_sha256": "d699701012be84d775c024fc75917d354f24ae2b202fd052053fbe1a0ff5a3bf",
+    "sha256": "e3c8e71b2c0bd7fbb549d38e42e1c7bac8f317e3efb5c12eb7892af24c22bfdf",
+    "adaptation": "Sibling UniqueCheck import path adjusted for shared vendor layout only."
   }
 }

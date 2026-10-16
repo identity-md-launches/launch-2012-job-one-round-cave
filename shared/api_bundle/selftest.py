@@ -15,6 +15,57 @@ import api_bundle as bundle
 
 
 class BundleTests(unittest.TestCase):
+    def dependency_doc(self, rules=None, response=False, version='3.1.0'):
+        doc = copy.deepcopy(self.doc)
+        doc['openapi'] = version
+        schema = {'type': 'object', 'properties': {name: {'type': 'string'} for name in ('a', 'b', 'c')}}
+        if rules is not None:
+            schema['dependentRequired'] = rules
+        content = {'application/json': {'schema': schema}}
+        operation = doc['paths']['/items']['get']
+        if response:
+            operation['responses']['200']['content'] = content
+        else:
+            operation['requestBody'] = {'content': content}
+        return doc
+
+    def test_dependency_approved_public_api(self):
+        old = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
+        body = old['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']
+        body.setdefault('properties', {}).update({'clientReference': {'type': 'string'}, 'clientContext': {'type': 'string'}})
+        new = copy.deepcopy(old)
+        new['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['dependentRequired'] = {'clientReference': ['clientContext']}
+        a, b = self.archive('old.zip', old), self.archive('new.zip', new)
+        before = {p.name: p.read_bytes() for p in self.root.iterdir()}
+        report = bundle.compare(a, b, old_sha256=hashlib.sha256(a.read_bytes()).hexdigest(), new_sha256=hashlib.sha256(b.read_bytes()).hexdigest())
+        self.assertEqual(report['counts'], {'breaking': 1, 'review': 1, 'info': 0})
+        self.assertEqual(report['operations_compared'], 5)
+        self.assertIn('dependent_required_incompatible', [f['code'] for f in report['findings']])
+        self.assertEqual(before, {p.name: p.read_bytes() for p in self.root.iterdir()})
+
+    def test_dependency_response_and_version_scope(self):
+        for version in ('3.1.0', '3.0.3'):
+            a = self.archive('a.zip', self.dependency_doc({'a': ['b']}, response=True, version=version))
+            b = self.archive('b.zip', self.dependency_doc(response=True, version=version))
+            self.assertEqual(bundle.compare(a, b)['status'], 'breaking' if version == '3.1.0' else 'review_required')
+            self.assertEqual(bundle.compare(b, a)['status'], 'review_required')
+
+    def test_dependency_transitive_equivalence_retains_review(self):
+        a = self.archive('a.zip', self.dependency_doc({'a': ['b'], 'b': ['c']}))
+        b = self.archive('b.zip', self.dependency_doc({'a': ['b', 'c'], 'b': ['c']}))
+        self.assertEqual(bundle.compare(a, b)['status'], 'review_required')
+        self.assertEqual(bundle.compare(b, a)['counts']['breaking'], 0)
+
+    def test_dependency_limits_and_malformed_cli(self):
+        a = self.archive('a.zip', self.dependency_doc())
+        for rules, expected in ((None, 0), ({'a': ['b']}, 1), ({'a': []}, 3),
+                                ({'a': ['b', 'b']}, 2), ({'a': 'b'}, 2),
+                                ({'a': [str(n) for n in range(257)]}, 2)):
+            b = self.archive('b.zip', self.dependency_doc(rules))
+            result = subprocess.run([sys.executable, '-B', str(Path(bundle.__file__)), str(a), str(b)], capture_output=True, text=True, timeout=10)
+            self.assertEqual(result.returncode, expected, result.stderr)
+
+
     def test_uniqueness_on_captured_public_api(self):
         baseline = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
         schema = baseline['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']
@@ -212,7 +263,7 @@ class BundleTests(unittest.TestCase):
         proposed['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['properties']['clientNote']['maxLength'] = 80
         old, new = self.archive('old.zip', baseline), self.archive('new.zip', proposed)
         report = bundle.compare(old, new)
-        self.assertEqual(report['extension'], 'uniquecheck-v1 (includes constcheck-v1, multiplecheck-v1, boundcheck-v1)')
+        self.assertEqual(report['extension'], 'dependcheck-v1 (includes uniquecheck, constcheck, multiplecheck, boundcheck)')
         self.assertEqual(report['counts']['breaking'], 1)
         self.assertEqual(report['counts']['review'], 1)
         self.assertIn('size_bound_incompatible', [f['code'] for f in report['findings']])
